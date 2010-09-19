@@ -1,6 +1,6 @@
 <?php
 
-    $con = mysql_connect("data.mccormicktechnologies.com", "mccormick_tech", "mcc0rm1ck_t3ch");
+    $con = mysql_connect("data.mccormicktechnologies.com", "mccormick_tech", "mcc0rm1ck_t3ch!");
     if (!$con)
     {
         die("Could not connect: " . mysql_error());
