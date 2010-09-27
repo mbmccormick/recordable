@@ -5,6 +5,7 @@
   <script type="text/javascript" src="files/css-browser-selector.js"></script>
   <link rel="stylesheet" href="files/stylesheet.css" />
   <link rel="shortcut icon" type="image/x-icon" href="/files/favicon.ico">
+  <meta name="description" content="Simple phone conversation recording, anywhere, anytime!" /> 
 </head>
 <body>
   <table cellspacing="0" style="width: 100%">
