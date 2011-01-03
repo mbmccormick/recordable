@@ -12,7 +12,7 @@
     
     $row = mysql_fetch_array($result);
 
-    if ($row[sessioncode] == null || $_GET[session] == null)
+    if ($row[sessioncode] != null || $_GET[session] != null)
     {
         header("Content-disposition: attachment; filename=session$row[sessioncode].mp3");
         header("Content-type: audio/mp3");
