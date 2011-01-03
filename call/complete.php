@@ -37,7 +37,7 @@
         "POST", array(
         "To" => $_POST[Caller],
         "From" => "313-829-0481",
-        "Body" => "Thank you for using Recordable! The session code for your call is $code. Enter this code on http://recordableapp.com to listen to your recording."
+        "Body" => "Thank you for using Recordable! The session code for your call is $code. Enter this code at http://recordableapp.com to listen to your recording."
     ));
 
     mysql_close($con);
