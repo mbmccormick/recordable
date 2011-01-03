@@ -1,132 +1,190 @@
 html
 {
-	background-image: url("bg.jpg");
-	background-repeat: no-repeat;
-	background-position: center 50px;
-    height: 100%;
-    width: 100%;
 }
 
 body
 {
-	font-family: "Myriad Pro", Trebuchet MS, Arial;
-    font-size: 1em;
-    line-height: 1em;
-    margin: 80px auto 0;
+    background: whiteSmoke url(/files/bg.png) repeat-y scroll 50% 50%;
+    font-family: Helvetica, Arial;
+    color: #333333;
+    font-size: 18px;
     padding: 30px;
-    width: 1000px;
+    text-shadow: rgba(0, 0, 0, 0.00390625) 0px 0px 1px;
 }
 
 a
 {
-    color: #000000;
+    color: #4183C4;
+    text-decoration: none;
 }
 
 a:hover
 {
-    color: #000000;
+    color: #4183C4;
+    text-decoration: underline;
 }
 
-.ie body
+.header
+{
+    padding: 0px 18px 0px 18px;
+}
+
+.header h1
+{
+    font-size: 36px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header h1 a
+{
+    color: #4183C4;
+    text-decoration: none;
+}
+
+.header h1 a:hover
+{
+    color: #4183C4;
+    text-decoration: none;
+}
+
+.header p
+{
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer
 {
     font-size: 14px;
+    padding: 0px 18px 0px 18px;
 }
 
-.ie p.description
+.page
 {
-    padding-top: 30px;
+    margin: 0px auto;
+    width: 700px;
 }
 
-.input-text
+.content
 {
-	font-size: 1em;
-    background: none repeat scroll 0% 0% rgb(255, 255, 255);
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(204, 204, 204) rgb(153, 153, 153) rgb(153, 153, 153) rgb(204, 204, 204);
-    color: rgb(0, 0, 0);
-    height: 28px;
-    margin: 0pt;
-    padding: 0px 8px 0pt 5px;
-    vertical-align: top;
+    padding: 40px 0px 40px 0px;
 }
 
-.select
+.step
 {
-	font-size: 1em;
-    background: none repeat scroll 0% 0% rgb(255, 255, 255);
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(204, 204, 204) rgb(153, 153, 153) rgb(153, 153, 153) rgb(204, 204, 204);
-    color: rgb(0, 0, 0);
-    margin: 0pt;
-    vertical-align: top;
-    height: 28px;
-    padding-top: 2px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #e4e4e4;
 }
 
-.textarea
+.step-number
 {
-	font-size: 1em;
-    background: none repeat scroll 0% 0% rgb(255, 255, 255);
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(204, 204, 204) rgb(153, 153, 153) rgb(153, 153, 153) rgb(204, 204, 204);
-    color: rgb(0, 0, 0);
-    margin: 0pt;
-    padding: 3px 0px 3pt 5px;
-    vertical-align: top;
-    line-height: 1.3em;
+    font-weight: bold;
 }
 
-.button-container
+.form
 {
-    border-bottom:1px solid #E7E7E7;
-    border-right:1px solid #E7E7E7;
-    display:inline-block;
-    margin:3px 0 4px 0px;
-    width: 97px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    border: solid 3px #e4e4e4;
+    font-weight: bold;
+    font-size: 20px;
 }
 
-.button
+.form h3
 {
-    background:none repeat scroll 0 0 #EEEEEE;
-    border-color:#CCCCCC #999999 #999999 #CCCCCC;
-    border-style:solid;
-    border-width:1px;
-    display:block;
-    height:30px;
-    width: 95px;
+    margin: 0px;
+    padding: 0px;
+    display: inline;
 }
 
-.input-submit
+.form input[type=text]
 {
-    border: solid 1px #cccccc;
-    font-family: Myriad Pro;
-    font-size: 26px;
-    margin-top: -2px;
-    padding-top: 1px;
-    background-color: #cccccc;
+    font-size: 22px;
+    border: 1px solid #C4C4C4;
+    font-family: helvetica, arial;
+    padding: 5px;
+    text-shadow: rgba(0, 0, 0, 0.00390625) 0px 0px 1px;
+    text-align: center;
+}
+
+.form input[type=button], .form input[type=submit]
+{
+    font-size: 18px;
+    font-family: helvetica, arial;
+    padding: 5px;
+    text-shadow: rgba(0, 0, 0, 0.00390625) 0px 0px 1px;
+    text-align: center;
+}
+
+.form input[type=submit]
+{
+    background-color: #4183C4;
+    border: none;
     color: #ffffff;
+    padding: 7px 9px;
     cursor: pointer;
 }
 
-@font-face
+.question-list
 {
-	font-family: "Hand of Sean";
-	src: url("handsean.ttf");
+    padding: 0px 18px 0px 18px;
+    margin-top: 50px;
+    font-size: 14px;
+    font-weight: normal;
 }
 
-
-@font-face
+.question
 {
-	font-family: "Myriad Pro";
-	src: url("MyriadPro-Regular.otf");
+    line-height: 1.5em;
+    padding-bottom: 20px;
+    text-align: justify;
 }
 
-@font-face
+.highlight
 {
-	font-family: "Myriad Pro";
-	font-weight: bold;
-	src: url("MyriadPro-Bold.otf");
+    color: #4183C4;
+    font-weight: normal;
+    font-size: 28px;
+}
+
+.error
+{
+    background-color: #E64343;
+    border-bottom: 3px solid #B53333;
+    color: white;
+    font: normal normal 500 large/normal Arial, Helvetica, clean, sans-serif;
+    text-align: center;
+}
+
+.success
+{
+    background-color: #42A84F;
+    border-bottom: 3px solid #288033;
+    color: white;
+    font: normal normal 500 large/normal Arial, Helvetica, clean, sans-serif;
+    text-align: center;
+}
+
+#arrow-top
+{
+    background: #DBDBDB;
+    border-bottom-left-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+    border-top-left-radius: 5px 5px;
+    border-top-right-radius: 5px 5px;
+    color: #333;
+    cursor: pointer;
+    display: block;
+    font-size: 36px;
+    opacity: 0.7;
+    padding: 12px 18px;
+    position: fixed;
+    right: 52px;
+    top: 42px;
 }

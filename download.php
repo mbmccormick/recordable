@@ -8,19 +8,19 @@
 
     mysql_select_db("mccormicktech_rec", $con);
     
-    $result = mysql_query("SELECT * FROM recordable WHERE sessioncode = '$_GET[sessioncode]'");
+    $result = mysql_query("SELECT * FROM recordable WHERE sessioncode = '$_GET[session]'");
     
     $row = mysql_fetch_array($result);
 
-    if ($row[sessioncode] != null)
+    if ($row[sessioncode] == null || $_GET[session] == null)
     {
-        header("Content-disposition: attachment; filename=session$row[sessioncode].wav");
-        header("Content-type: audio/wav");
+        header("Content-disposition: attachment; filename=session$row[sessioncode].mp3");
+        header("Content-type: audio/mp3");
         readfile("$row[recordingurl]");
     }
     else
     {
-        header("Location: http://recordableapp.com/error.php");
+        header("Location: http://recordableapp.com/?error=We were unable to locate a recording for that session code. Please check your entry and try again.");
         exit;
     }
 
