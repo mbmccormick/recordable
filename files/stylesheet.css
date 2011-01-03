@@ -1,14 +1,18 @@
 html
 {
+    padding: 0px;
+    margin: 0px;
 }
 
 body
 {
-    background: whiteSmoke url(/files/bg.png) repeat-y scroll 50% 50%;
+    background-color: #57BCF2;
+    background-image: url(/files/bg.gif);
     font-family: Helvetica, Arial;
     color: #333333;
     font-size: 18px;
-    padding: 30px;
+    padding: 0px 30px 0px 30px;
+    margin: 0px;;
     text-shadow: rgba(0, 0, 0, 0.00390625) 0px 0px 1px;
 }
 
@@ -65,7 +69,9 @@ a:hover
 .page
 {
     margin: 0px auto;
-    width: 700px;
+    width: 760px;
+    padding: 40px 30px 30px 30px;
+    background-color: #ffffff;
 }
 
 .content
@@ -84,6 +90,7 @@ a:hover
 .step-number
 {
     font-weight: bold;
+    color: #4183C4;
 }
 
 .form
@@ -111,6 +118,8 @@ a:hover
     padding: 5px;
     text-shadow: rgba(0, 0, 0, 0.00390625) 0px 0px 1px;
     text-align: center;
+    font-weight: bold;
+    color: #333333;
 }
 
 .form input[type=button], .form input[type=submit]
@@ -173,7 +182,7 @@ a:hover
 
 #arrow-top
 {
-    background: #DBDBDB;
+    background: #f4f4f4;
     border-bottom-left-radius: 5px 5px;
     border-bottom-right-radius: 5px 5px;
     border-top-left-radius: 5px 5px;
