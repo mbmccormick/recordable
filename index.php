@@ -39,17 +39,8 @@
             <table cellpadding="0" cellspacing="0" style="width: 100%;">
                 <tr valign="middle">
                     <td align="left">
-                        <table cellpadding="0" cellspacing="0">
-                            <tr valign="middle">
-                                <td width="82">
-                                    <img src="/files/logo.png" style="padding-top: 8px;" />
-                                </td>
-                                <td>
-                                    <h1><a href="/">Recordable</a></h1>
-                                    <p>Simple phone conversation recording.</p>
-                                </td>
-                            </tr>
-                        </table>
+                        <h1><a href="/">Recordable</a></h1>
+                        <p>Simple phone conversation recording.</p>
                     </td>
                     <td align="right">
                         <div class="highlight">
