@@ -198,3 +198,17 @@ a:hover
     right: 52px;
     top: 42px;
 }
+
+.transcript
+{
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.5em;
+    padding-top: 20px;
+}
+
+.transcript b
+{
+    padding-bottom: 7px;
+    display: block;
+}
