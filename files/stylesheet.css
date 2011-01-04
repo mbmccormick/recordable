@@ -7,7 +7,8 @@ html
 body
 {
     background-color: #57BCF2;
-    background-image: url(/files/bg.gif);
+    background-image: url(/files/bg.png);
+    background-attachment: fixed;
     font-family: Helvetica, Arial;
     color: #333333;
     font-size: 18px;
