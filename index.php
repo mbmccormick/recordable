@@ -1,6 +1,7 @@
 <?php
 
     require "call/twilio.php";
+    require "config/config.php";
 
     if (isset($_GET[session]) == true)
     {
@@ -88,7 +89,8 @@
                     <input onclick="this.form.action='/'; return true;" type="submit" value="Play" />
                     <input onclick="this.form.action='/download.php'; return true;" type="submit" value="Download" />
                 </form>
-                <?php if ($row[sessioncode] != null || $_GET[session] != null) { ?>
+                <?php if ($row != null) { ?>
+                <?php if ($row[ispaid] == 1) { ?>
                 <br />
                 <p id="audioplayer_1">Sorry, your browser does not support Adobe Flash!</p>  
                 <script type="text/javascript">
@@ -105,12 +107,29 @@
                 <i>Your transcription is not ready yet, please check back later...</i>
                 </div>
                 <?php } ?>
-                <?php } ?>                
+                <?php } else { ?>
+                <p style="font-size: 16px; font-weight: normal; line-height: 1.5em;">To access your recording online, please click the button below. The total for your recording is <b>$<?php echo (0.35 + (ceil($row[duration] / 60) * 0.10)); ?></b>, this is a one-time fee and offers unlimited access to your recording.</p>
+                <br />
+                <form method="post" name="form" action="https://www.paypal.com/cgi-bin/webscr"> 
+                    <input type="hidden" name="notify_url" value="http://recordableapp.com/payment.php" /> 
+                    <input type="hidden" name="cmd" value="_ext-enter" /> 
+                    <input type="hidden" name="redirect_cmd" value="_xclick" /> 
+                    <input type="hidden" name="business" value="<?php echo $PayPalAddress; ?>" /> 
+                    <input type="hidden" name="item_name" value="Recordable (Session #<?php echo $row[sessioncode]; ?>)" /> 
+                    <input type="hidden" name="item_number" value="<?php echo $row[sessioncode]; ?>" /> 
+                    <input type="hidden" name="amount" value="<?php echo (0.35 + (ceil($row[duration] / 60) * 0.10)); ?>" /> 
+                    <input type="hidden" name="no_shipping" value="1" /> 
+                    <input type="hidden" name="currency_code" value="USD" /> 
+                    <input type="hidden" name="return" value="http://recordableapp.com/?session=<?php echo $row[sessioncode]; ?>" />
+                    <input type="submit" value="Access Recording" style="background-color: #71B520; font-size: 20px; font-weight: bold;" />
+                </form>
+                <?php } ?>
+                <?php } ?>
             </div>
             <div class="question-list">
                 <div class="question">
                     <h3>How much does this service cost?</h3>
-                    For now, nothing. Recordable is still in the early stages of development. As we add more features and really start to harden our services, we may switch to a payment plan. But rest assured, basic phone conversation recording will always be free!
+                    Basic conversation recording with Recordable is free!  You can listen to your recording from any phone at no charge. To access your recording online, including unlimited playback and MP3 downloads, there is a small one-time fee of just 35&cent; per call + 10&cent; per minute. For example, a 5 minute conversation would cost just 85&cent;.
                 </div>
                 <div class="question">
                     <h3>Where are my recordings stored?</h3>

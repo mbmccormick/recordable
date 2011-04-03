@@ -1,5 +1,7 @@
 <?php
 
+    require "config/config.php";
+    
     $con = mysql_connect($Server, $Username, $Password);
     if (!$con)
     {
@@ -8,12 +10,17 @@
 
     mysql_select_db($Database, $con);
     
-    $result = mysql_query("SELECT * FROM recordable WHERE sessioncode = '$_GET[session]'");
-    
+    $result = mysql_query("SELECT * FROM recordable WHERE sessioncode='$_GET[session]'");  
     $row = mysql_fetch_array($result);
 
-    if ($row[sessioncode] != null || $_GET[session] != null)
+    if ($row != null)
     {
+        if ($row[ispaid] == 0)
+        {
+            header("Location: http://recordableapp.com/?session=$row[sessioncode]");
+            exit;
+        }
+        
         header("Content-disposition: attachment; filename=session$row[sessioncode].mp3");
         header("Content-type: audio/mpeg");
         readfile("$row[recordingurl]");

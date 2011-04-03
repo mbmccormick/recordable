@@ -1,15 +1,16 @@
 <?php
 
-    $con = mysql_connect("data.mccormicktechnologies.com", "mccormick_tech", "mcc0rm1ck_t3ch!");
+    require "../config/config.php";
+    
+    $con = mysql_connect($Server, $Username, $Password);
     if (!$con)
     {
         die("Could not connect: " . mysql_error());
     }
 
-    mysql_select_db("mccormicktech_rec", $con);
+    mysql_select_db($Database, $con);
     
-    $result = mysql_query("SELECT * FROM recordable WHERE sessioncode = '$_POST[Digits]'");
-    
+    $result = mysql_query("SELECT * FROM recordable WHERE sessioncode='$_POST[Digits]'");
     $row = mysql_fetch_array($result);
 
     if ($row[sessioncode] != null)
