@@ -47,6 +47,11 @@ a:hover
     text-decoration: none;
 }
 
+.header h1 a img
+{
+    border: none;
+}
+
 .header h1 a:hover
 {
     color: #4183C4;
