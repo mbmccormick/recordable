@@ -37,17 +37,11 @@
     <div class="quickstart">
         <div class="container">
             <div class="row">
-                <div class="span5">
-                    <h6>Step One</h6>
-                    <p>Dial <b>877-395-3442</b> from your phone.</p>
-                </div>
-                <div class="span5">
-                    <h6>Step Two</h6>
-                    <p>Follow the prompts and place your call.</p>
-                </div>
-                <div class="span5">
-                    <h6>Step Three</h6>
-                    <p>Receive your session code and enter it below.</p>
+                <div class="span16">
+                    <h6>Enter your session code here:</h6>
+                    <form id="session">
+                        <input type="text"></input>
+                    </form>
                 </div>
             </div>
         </div>
@@ -83,9 +77,12 @@
             <?php } ?>
             <?=$content?>
         </section>
-        <footer>
-            <p><a href="<?=option('base_uri')?>"><?=ApplicationName?></a> is powered by <a href="http://github.com/mccormicktechnologies/limoncello" target="_blank">Limoncello</a>. Version <?=Version?>.</p>
-        </footer>
     </div>
-    </body>
+    <footer class="footer">
+        <div class="container">
+            <p class="pull-right"><a href="#">Back to top</a></p>
+            <p><a href="<?=option('base_uri')?>"><?=ApplicationName?></a> is powered by <a href="http://github.com/mccormicktechnologies/limoncello" target="_blank">Limoncello</a>. Version <?=Version?>.</p>
+        </div>
+    </footer>
+</body>
 </html>
