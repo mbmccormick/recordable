@@ -1,18 +1,14 @@
 <?php
 
     // database configuration
-    $Server = "yourserver.com";
-    $Username = "youruser";
-    $Password = "yourpass";
-    $Database = "yourdatabase";
-    
-    // twilio settings
-    $AccountSid = "AC********************************";
-    $AuthToken = "********************************";
-    $ApiVersion = "2010-04-01";
-    $PhoneNumber = "555-555-1212";
+    define(Server, "yourserver.com");
+    define(Username, "youruser");
+    define(Password, "yourpass");
+    define(Database, "yourdatabase");
     
     // application settings
-    $PayPalAddress = "paypal@yourserver.com";
+    define(ApplicationName, "Limoncello");
+    define(EmailAddress, "system@yourserver.com");
+    define(Version, "2011.01.01");
     
 ?>
