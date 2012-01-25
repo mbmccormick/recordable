@@ -6,7 +6,6 @@
     
     require("config/config.php");
     require("library/utils.php");
-    require("library/security.php");
     
     /* Establish database connection */
     $con = mysql_connect(Server, Username, Password);

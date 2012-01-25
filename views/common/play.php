@@ -1,9 +1,9 @@
 <div class="row">
     <div class="span8">
         <?php if ($conversation[ispaid] == 1) { ?>
-        <p id="audioplayer_1">Sorry, your browser does not support Adobe Flash!</p>  
+        <p id="audioplayer">Sorry, your browser does not support Adobe Flash!</p>  
         <script type="text/javascript">
-            AudioPlayer.embed("audioplayer_1", {soundFile: "<?=$conversation[recordingurl]?>.mp3", titles: "Session #<?php echo $row[sessioncode]; ?>"});
+            AudioPlayer.embed("audioplayer", {soundFile: "<?=$conversation[recordingurl]?>.mp3", titles: "Session #<?php echo $row[sessioncode]; ?>"});
         </script>
         <?php } else { ?>
         <p style="font-size: 16px; font-weight: normal; line-height: 1.5em;">To access your recording online, please click the button below. The total for your recording is <b>$<?=(0.35 + (ceil($conversation[duration] / 60) * 0.10))?></b>, this is a one-time fee and offers unlimited access to your recording.</p>

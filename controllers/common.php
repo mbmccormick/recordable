@@ -1,6 +1,6 @@
 <?php
 
-    function common_dashboard()
+    function common_home()
     {
         set("title", "Home");
         return html("common/home.php");
