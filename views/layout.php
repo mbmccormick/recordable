@@ -16,6 +16,14 @@
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-tabs.js"></script>
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/bootstrap-buttons.js"></script>
     <script type="text/javascript" src="<?=option('base_uri')?>public/js/common.js"></script>
+    <script type="text/javascript" src="<?=option('base_uri')?>public/js/audio-player.js"></script>  
+    <script type="text/javascript">
+        AudioPlayer.setup("http://<?=$_SERVER['HTTP_HOST']?>/public/js/player.swf", {
+            width: 357,
+            autostart: "yes",
+            animation: "no"
+        });
+    </script>
 </head> 
 <body>
     <div class="topbar">
