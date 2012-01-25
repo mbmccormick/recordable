@@ -40,7 +40,9 @@
                 <div class="span16">
                     <h6>Enter your session code here:</h6>
                     <form id="session">
-                        <input type="text"></input>
+                        <input type="text"></input><br/ >
+                        <br />
+                        <button class="btn large">Play</button>&nbsp;<button class="btn large">Download</button>
                     </form>
                 </div>
             </div>
