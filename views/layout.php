@@ -26,6 +26,14 @@
     </script>
 </head> 
 <body>
+    <header class="jumbotron masthead" id="overview">
+        <div class="inner">
+            <div class="container">
+                <h1>Recordable</h1>
+                <p class="lead">Simple phone conversation recording.</p>
+            </div>
+        </div>
+    </header>
     <div class="container">
         <div class="content">
             <div class="page-header">
