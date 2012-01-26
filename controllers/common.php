@@ -20,11 +20,20 @@
             $called = substr($called, 0, 3) . "-" . substr($called, 3, 3) . "-" . substr($called, 6, 4);
 
 
-            set("title", "Play");
             set("conversation", $conversation);
             set("caller", $caller);
             set("called", $called);
-            return html("common/play.php");            
+
+            if ($conversation[ispaid] == 1)
+            {
+                set("title", "Play");
+                return html("common/play.php");  
+            } 
+            else
+            {
+                set("title", "Purchase");
+                return html("common/purchase.php");
+            }         
         }
         else
         {
