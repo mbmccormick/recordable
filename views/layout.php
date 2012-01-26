@@ -20,11 +20,11 @@
 <body>
     <div class="container">
         <div class="hero-unit">
-            <h1>Recordable</h1>
+            <h1><a href="<?=option('base_uri')?>">Recordable</a></h1>
             <p>Simple phone conversation recording. Dial <b>877-395-3442</b> from your phone to get started.</p>
             <br />
             <form id="session" action="<?=option('base_uri')?>play" method="GET">
-                <p><input type="text" name="code" id="code" value="<?=$_GET[code]?>"></input>&nbsp;<button type="submit" class="btn large primary">Listen Online</a>
+                <p><input type="text" name="code" id="code" value="<?=$_GET[code]?>"></input>&nbsp;<button type="submit" class="btn large">Listen Online</a>
                 </p>
             </form>
         </div>

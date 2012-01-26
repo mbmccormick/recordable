@@ -7,13 +7,13 @@
             <input type="hidden" name="cmd" value="_ext-enter" /> 
             <input type="hidden" name="redirect_cmd" value="_xclick" /> 
             <input type="hidden" name="business" value="papyal@mccormicktechnologies.com" /> 
-            <input type="hidden" name="item_name" value="Recordable (Session #<?=conversation[sessioncode]?>)" /> 
-            <input type="hidden" name="item_number" value="<?=conversation[sessioncode]?>" /> 
+            <input type="hidden" name="item_name" value="Recordable (Session #<?=$conversation[sessioncode]?>)" /> 
+            <input type="hidden" name="item_number" value="<?=$conversation[sessioncode]?>" /> 
             <input type="hidden" name="amount" value="<?=(0.35 + (ceil($conversation[duration] / 60) * 0.10))?>" /> 
             <input type="hidden" name="no_shipping" value="1" /> 
             <input type="hidden" name="currency_code" value="USD" /> 
-            <input type="hidden" name="return" value="http://<?=$_SERVER['HTTP_HOST']?><?=option('base_uri')?>play?code=<?=conversation[sessioncode]?>" />
-            <a href="#" onclick="this.form.submit()">Click here to purchase</a>
+            <input type="hidden" name="return" value="http://<?=$_SERVER['HTTP_HOST']?><?=option('base_uri')?>play?code=<?=$conversation[sessioncode]?>" />
+            <a href="javascript:this.form.submit()">Click here to purchase</a>
         </form>
     </div>
 </div>
