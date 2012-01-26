@@ -35,7 +35,7 @@
     
     /* Declare Common routes */
     dispatch('/', 'common_home');
-    dispatch('/play/:session', 'common_play');
+    dispatch('/play', 'common_play');
     dispatch('/download/:session', 'common_download');
     dispatch_post('/payment', 'common_payment');
 

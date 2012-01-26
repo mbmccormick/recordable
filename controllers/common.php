@@ -8,13 +8,22 @@
 
     function common_play()
     {
-        $result = mysql_query("SELECT * FROM recordable WHERE sessioncode='" . params('session') . "'");  
+        $result = mysql_query("SELECT * FROM recordable WHERE sessioncode='" . $_GET[code] . "'");  
         $conversation = mysql_fetch_array($result);
 
         if ($conversation != null)
         {
+            $caller = str_replace("+1", "", $conversation[caller]);
+            $caller = substr($caller, 0, 3) . "-" . substr($caller, 3, 3) . "-" . substr($caller, 6, 4);
+
+            $called = str_replace("+1", "", $conversation[called]);
+            $called = substr($called, 0, 3) . "-" . substr($called, 3, 3) . "-" . substr($called, 6, 4);
+
+
             set("title", "Play");
             set("conversation", $conversation);
+            set("caller", $caller);
+            set("called", $called);
             return html("common/play.php");            
         }
         else
