@@ -14,7 +14,8 @@ h1 a, h1 a:hover {
 
 .hero-unit p {
     font-size: 30px;
-    line-height: 1.2em;
+    line-height: 1.3em;
+    padding-top: 10px;
 }
 
 .hero-unit b {
