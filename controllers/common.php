@@ -137,26 +137,12 @@
         {
             fputs ($fp, $header . $req);
 
-            while (!feof($fp))
+            if ($payment_status == "Completed")
             {
-                $res = fgets ($fp, 1024);
-                if (strcmp ($res, "VERIFIED") == 0)
+                if ($payment_amount == (0.35 + (ceil($row[duration] / 60) * 0.10)) &&
+                    $payment_currency == "USD")
                 {
-                    $result = mysql_query("SELECT * FROM recordable WHERE sessioncode='" . params('session') . "'");                
-                    $row = mysql_fetch_array($result);
-                    
-                    if ($payment_status == "Completed")
-                    {
-                        if ($payment_amount == (0.35 + (ceil($row[duration] / 60) * 0.10)) &&
-                            $payment_currency == "USD")
-                        {
-                            mysql_query("UPDATE recordable SET ispaid='1' WHERE sessioncode='" . params('session') . "'"); 
-                        }
-                    }
-                }
-                else if (strcmp ($res, "INVALID") == 0)
-                {
-                    mysql_query("UPDATE recordable SET notes='" . implode(",", $_POST) . ",invalid' WHERE sessioncode='" . params('session') . "'"); 
+                    mysql_query("UPDATE recordable SET ispaid='1' WHERE sessioncode='" . params('session') . "'"); 
                 }
             }
             
