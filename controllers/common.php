@@ -37,7 +37,7 @@
         }
         else
         {
-            header("Location: " . option('base_uri') . "&error=We were unable to locate a recording for that session code!");
+            header("Location: " . option('base_uri') . "?error=We were unable to locate a recording for that session code!");
             exit;
         }
     }
@@ -61,7 +61,7 @@
         }
         else
         {
-            header("Location: " . option('base_uri') . "&error=We were unable to locate a recording for that session code!");
+            header("Location: " . option('base_uri') . "?error=We were unable to locate a recording for that session code!");
             exit;
         }
     }

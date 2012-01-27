@@ -45,7 +45,7 @@
         echo "<Response>\n";
         echo "<Say voice='man'>You will now be connected with your party, press star when you have finished your conversation.</Say>\n";
         // echo "<Dial action='" . option('base_uri') . "inbound/voice/complete?dialed=" . $_POST[Digits] . "' hangupOnStar='true' record='true' transcribe='true' transcribeCallback='" . option('base_uri') . "inbound/voice/transcript' maxLength='5400' callerId='" . $_POST[Caller] . "'>\n";
-        echo "<Dial action='" . option('base_uri') . "inbound/voice/complete&dialed=" . $_POST[Digits] . "' hangupOnStar='true' record='true' callerId='" . $_POST[Caller] . "'>\n";
+        echo "<Dial action='" . option('base_uri') . "inbound/voice/complete?dialed=" . $_POST[Digits] . "' hangupOnStar='true' record='true' callerId='" . $_POST[Caller] . "'>\n";
         echo $_POST[Digits] . "\n";
         echo "</Dial>\n";
         echo "</Response>\n";
