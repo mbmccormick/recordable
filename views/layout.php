@@ -23,7 +23,7 @@
             <h1><a href="<?=option('base_uri')?>">Recordable</a></h1>
             <p>Simple phone conversation recording.<br />Dial <b>877-395-3442</b> from your phone to get started.</p>
             <br />
-            <form id="session" action="<?=option('base_uri')?>play" method="GET">
+            <form class="form-stacked" id="session" action="<?=option('base_uri')?>play" method="GET" style="padding-left: 0px;">
                 <input type="text" name="code" id="code" value="<?=$_GET[code]?>"></input>&nbsp;<button type="submit" class="btn large">Listen Online</a>
             </form>
         </div>
