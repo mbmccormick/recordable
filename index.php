@@ -36,8 +36,9 @@
     /* Declare Common routes */
     dispatch('/', 'common_home');
     dispatch('/play', 'common_play');
+    dispatch('/play/:session', 'common_play_2');
     dispatch('/download/:session', 'common_download');
-    dispatch_post('/payment', 'common_payment');
+    dispatch_post('/payment/:session', 'common_payment');
 
     /* Declare Inbound routes */
     dispatch_post('/inbound/voice/menu', 'inbound_voice_menu');
