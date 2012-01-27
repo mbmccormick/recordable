@@ -131,7 +131,7 @@
 
         if (!$fp)
         {
-            // HTTP ERROR
+            mysql_query("UPDATE recordable SET notes='" . implode(",", $_POST) . ",http error' WHERE sessioncode='" . params('session') . "'");
         }
         else
         {
@@ -156,7 +156,7 @@
                 }
                 else if (strcmp ($res, "INVALID") == 0)
                 {
-                    // log for manual investigation
+                    mysql_query("UPDATE recordable SET notes='" . implode(",", $_POST) . ",invalid' WHERE sessioncode='" . params('session') . "'"); 
                 }
             }
             
